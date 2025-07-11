@@ -1,11 +1,11 @@
 # Use official Python base image
-FROM python:3.10-slim
+FROM python:3.9-slim
 
 # Set the working directory inside the container
 WORKDIR /app
 
 # Copy dependency list
-COPY requirements.txt .
+COPY . .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
